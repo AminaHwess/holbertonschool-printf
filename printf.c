@@ -6,47 +6,44 @@ int _printf(const char *format, ...)
 	int i = 0;
 	int j = 0;
 	int byte = 0;
-
+	va_list args;
 	prt f[] = {
-		{"s", string},
+		{"s", print_string},
 		{"c", character},
 		{"%", percentage},
 		{"\0", NULL},
 	};
 
-	va_list args;
-
-	va_start(args, format);
-	/*
-		if (format == NULL || format[i + 1] == '\0')
-		{
-			return (-1);
-		}
-	*/
 	if (format == NULL)
+	{
 		return (-1);
-	while (*(format + i) && format)
+	}
+	va_start(args, format);
+
+	while (format[i])
 	{
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 			byte++;
 		}
-
 		else
 		{
-
-			while (f[i].str != NULL)
+			i++;
+			while (f[j].str != NULL)
 
 			{
-				if (strcmp(format, f[i].str) == 0)
+				if (format[i] == f[j].str[0])
 
 				{
-					return (f[i].func(args));
+
+					byte += f[j].func(args);
+					break;
 				}
 				j++;
 			}
 		}
+		i++;
 	}
 	va_end(args);
 	return (byte);
