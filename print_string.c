@@ -8,7 +8,7 @@ int print_string(va_list args)
 
     if (s == NULL)
         {
-            s = "(null)"
+            s = "(null)";
         }
 
     while (s[i] != '\0')
