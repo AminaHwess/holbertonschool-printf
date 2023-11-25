@@ -11,7 +11,7 @@ int character(va_list args)
     return (1);
 }
 
-int percentage()
+int percentage(__attribute__((unused)) va_list args)
 {
     _putchar('%');
     return(1);
