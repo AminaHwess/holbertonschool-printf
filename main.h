@@ -17,7 +17,6 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int character(va_list args);
 int percentage();
-int print_digit(int num);
 int print_number(va_list args)
 
 #endif /* PRINTF */
