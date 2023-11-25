@@ -1,43 +1,39 @@
 #include "main.h"
 
 /**
- * print_number - Print number
- * @args: the number
- *
- * Return: n (bytes)
- */
+* print_number - function that returns an int to signed decimal
+* @args: arguments passed
+* Return: length of integers
+*/
 int print_number(va_list args)
 {
-    int number = va_arg(args, int);
-    int count = 0;
+	int i, div, len;
+	unsigned int num;
 
-    if (number < 0)
-    {
-        _putchar('-');
-        number = -number;
-        count++;
-    }
+	i = va_arg(args, int);
+	div = 1;
+	len = 0;
+	if (i < 0)
+	{
+		len += _putchar('-');
+		num = i * -1;
+	}
+	else
+	{
+		num = i;
+	}
 
-    if (number / 10)
-        count += print_digit(number / 10);
+	for (; num / div > 9;)
+	{
+		div *= 10;
+	}
 
-    _putchar(number % 10 + '0');
-    return count + 1;
-}
+	for (; div != 0;)
+	{
+		len += _putchar('0' + (num / div));
+		num %= div;
+		div /= 10;
+	}
 
-/**
- * print_digit - print digit
- * @num: the number
- *
- * Return: Number of digits printed
- */
-int print_digit(int num)
-{
-    int count = 0;
-
-    if (num / 10)
-        count += print_digit(num / 10);
-
-    _putchar(num % 10 + '0');
-    return count + 1;
+	return (len);
 }
