@@ -14,9 +14,9 @@
 
 typedef struct prtf
 {
-    char str;
+	char str;
 
-    int (*func)(va_list args);
+	int (*func)(va_list args);
 } prt;
 
 /*prototypes*/
