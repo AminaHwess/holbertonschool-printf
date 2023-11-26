@@ -6,7 +6,7 @@
  *
  * Return: numbers of bytes printed.
  */
-
+int _printf(const char *format, ...)
 {
 	int byte = 0;
 	int i = 0;
