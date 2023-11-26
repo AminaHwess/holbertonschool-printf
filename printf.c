@@ -2,7 +2,7 @@
 
 /**
  * _printf - main of printf function
- * @format: number of arguments
+ * @format: char
  *
  * Return: numbers of bytes printed.
  */

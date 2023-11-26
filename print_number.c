@@ -2,9 +2,9 @@
 
 /**
  * print_number - Print number
- * @args: the number
+ * @args: variable argument list
  *
- * Return: n (bytes)
+ * Return: byte
  */
 int print_number(va_list args)
 
