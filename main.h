@@ -18,4 +18,6 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int character(va_list args);
 int percentage(__attribute__((unused)) va_list args);
+int print_number(va_list args);
+
 #endif

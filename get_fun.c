@@ -9,6 +9,8 @@ int get_fun(char format, va_list args)
         {'s', print_string},
         {'c', character},
         {'%', percentage},
+        {'i', print_number},
+        {'d', print_number},
         {'\0', NULL},
     };
 
