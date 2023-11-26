@@ -1,0 +1,57 @@
+PRINTF(3)                        User Commands                       PRINTF(3)
+
+
+
+man_3_printf.3
+
+
+NNAAMMEE
+       printf - custom formatted output conversion
+
+
+SSYYNNOOPPSSIISS
+       ##iinncclluuddee <<ssttddiioo..hh>>
+
+       iinntt pprriinnttff((ccoonnsstt cchhaarr **ffoorrmmaatt,, ......));;
+
+
+DDEESSCCRRIIPPTTIIOONN
+       The  pprriinnttff function formats and prints data to the standard output ac-
+       cording to the format string _f_o_r_m_a_t_.
+
+
+FFOORRMMAATT SSPPEECCIIFFIIEERRSS
+       The following format specifiers are supported:
+
+       %%cc     Prints a single character.
+
+
+       %%%%     Prints a percent character.
+
+
+       %%ss     Prints a null-terminated string.
+
+
+       %%ii,, %%dd Prints a signed integer.
+
+
+RREETTUURRNN VVAALLUUEE
+       Upon successful return, these functions return the number of characters
+       printed (excluding the null byte used to end output to strings).
+
+
+EEXXAAMMPPLLEESS
+       ##iinncclluuddee <<ssttddiioo..hh>>
+       int main() {
+       _p_r_i_n_t_f_(_"_H_e_l_l_o_, _%_s_! _T_h_e _a_n_s_w_e_r _i_s _%_d_._0_, _w_o_r_l_d _, _4_2_)_;
+       rreettuurrnn 00;;
+       }
+
+
+SSEEEE AALLSSOO
+       ffpprriinnttff(3), sspprriinnttff(3), ssnnpprriinnttff(3)
+
+
+
+
+Version 1.0                      November 2023                       PRINTF(3)

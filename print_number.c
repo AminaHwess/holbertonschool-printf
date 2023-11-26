@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_number - Print number
+ * @args: the number
+ *
+ * Return: n (bytes)
+ */
 int print_number(va_list args)
 
 {

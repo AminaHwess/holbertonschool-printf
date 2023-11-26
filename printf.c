@@ -1,6 +1,11 @@
 #include "main.h"
 
-int _printf(const char *format, ...)
+/**
+ * _printf - main of printf function
+ * @format: number of arguments
+ *
+ * Return: numbers of bytes printed.
+ */
 
 {
 	int byte = 0;

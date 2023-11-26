@@ -1,8 +1,10 @@
 #include "main.h"
+
 /**
- * main - main function
+ * character -  Print character
+ * @args: the character
  *
- *
+ * Return: 1 (byte)
  */
 
 int character(va_list args)
@@ -11,6 +13,12 @@ int character(va_list args)
     return (1);
 }
 
+/**
+ * percentage - print % 
+ * @args: arguments
+ * 
+ * Return: 1 (byte)
+*/
 int percentage(__attribute__((unused)) va_list args)
 {
     _putchar('%');

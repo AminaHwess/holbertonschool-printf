@@ -1,0 +1,67 @@
+man_3_printf.3
+." Man page for _printf.c
+.TH PRINTF 3 "November 2023" "Version 1.0" "User Commands"
+
+." Name of the function
+.SH NAME
+printf - custom formatted output conversion
+
+." Synopsis
+.SH SYNOPSIS
+.B #include <stdio.h>
+.PP
+.B int printf(const char *format, ...);
+
+." Description
+.SH DESCRIPTION
+The
+.B printf
+function formats and prints data to the standard output according to the format string
+.I format.
+
+." Format Specifiers
+.SH FORMAT SPECIFIERS
+The following format specifiers are supported:
+.TP
+.B %c
+Prints a single character.
+
+.TP
+.B %%
+Prints a percent character.
+
+.TP
+.B %s
+Prints a null-terminated string.
+
+.TP
+.B %i, %d
+Prints a signed integer.
+
+." Return value
+.SH RETURN VALUE
+Upon successful return, these functions return the number of characters printed (excluding the null byte used to end output to strings).
+
+." Example
+.SH EXAMPLES
+.sp
+.nf
+.B #include <stdio.h>
+.br
+int main() {
+.br
+.I printf("Hello, %s! The answer is %d.\n", "world", 42);
+.br
+.B return 0;
+.br
+}
+.fi
+
+." See Also
+.SH SEE ALSO
+.BR fprintf (3),
+.BR sprintf (3),
+.BR snprintf (3)
+
+." End of man page
+." Add any necessary footer information
